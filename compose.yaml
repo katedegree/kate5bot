@@ -1,0 +1,12 @@
+services:
+  bot:
+    build: ./
+    restart: always
+    command: node bot.js
+    volumes:
+      - .:/bot
+  # command:
+  #   build: ./
+  #   command: node command.js
+  #   volumes:
+  #     - .:/bot
