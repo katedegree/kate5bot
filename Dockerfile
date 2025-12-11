@@ -15,3 +15,4 @@ rsync -au --quiet /opt/node_modules/ /bot/node_modules/\n\
 exec "$@"\n' > /docker-entrypoint.sh && \
     chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["node", "bot.js"]
