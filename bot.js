@@ -25,7 +25,7 @@ client.on("messageCreate", async (message) => {
       const channel = await client.channels.fetch(channelId).catch(() => null);
       if (!channel || !channel.isTextBased()) continue;
 
-      channel.send(message.content).catch(console.error);
+      channel.send(message.content + "\n\n").catch(console.error);
     }
   }
 });
